@@ -46,7 +46,7 @@ def eliminar_post(publicacion_id:str):
     for index, publicacion in enumerate(posts):
         if publicacion["id"] == publicacion_id:
             posts.pop(index) #POP quita de la lista el elemento index
-            return "Publicacion eliminada"
+            return {"message":"Post Deleted"}
     raise HTTPException(status_code=404, detail="Post Not Found")
 
 @app.put('/posts/{publicacion_id}')
@@ -56,7 +56,7 @@ def actualizar_publicacion(publicacion_id:str, newPublicacion:Post):
             posts[index]["title"] = newPublicacion.title
             posts[index]["contenido"] = newPublicacion.contenido
             posts[index]["autor"] = newPublicacion.autor
-            return {"message":"TODO SALIO BIEN"}
+            return {"message":"Post Updated"}
     raise HTTPException(status_code=404, detail="Post Not Found")
 
 
