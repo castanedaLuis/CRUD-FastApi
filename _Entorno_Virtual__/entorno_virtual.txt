@@ -1,0 +1,55 @@
+API 
+{
+	https://fastapi-first.herokuapp.com/
+}
+
+COMANDO PARA CRERAR ENTORNO VIRTUAL ANCONDA
+
+conda create --name CRUD-FastApi python=3
+
+VARIABLES DE ENTORNO
+
+C:\Users\ GonzaloChacaltana\Anaconda3
+C:\Users\ GonzaloChacaltana\Anaconda3\Scripts
+C:\Users\ GonzaloChacaltana\Anaconda3\Library\bin
+
+PARA ACTIVARLO
+conda activate CRUD_FastApi
+
+PARA DESACTIVARLO
+conda deactivate 
+
+PARA ABRIR CODE
+code .
+
+INSTALAR DEPENDENIAS NECESARIAS
+
+pip install fastapi
+pip install uvicorn --Ayuda a ejecutar el servidor de python
+pip freeze > requirements.txt -- Guardar en un txt las dependencias ocupadas
+pydantic -- ayuda para la estructura de datos a utilizar 
+
+PARA CORRER FASTAPI
+uvicorn app:app --reload
+http://127.0.0.1:8000/docs
+
+
+HEROKU
+runtime.txt  --- python-3.9.6
+Procfile ---- 
+Ocupamos Git
+	git init
+	git add .
+	git commit -m ""
+$ heroku git:remote -a fastapi-first
+git remote -v --- Muestra hacia donde se va a subir el codigo
+
+git checkout -b  main
+git branch -D Master
+git push heroku main
+
+
+Para actualizar API en Heroku
+git add .
+git commit -m ""
+git push heroku main
